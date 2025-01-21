@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" class="display" disabled>
+            <div class="buttons">
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="operator" onclick="setOperation('/')">/</button>
+            
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="operator" onclick="setOperation('*')">*</button>
+            
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="operator" onclick="setOperation('-')">-</button>
+            
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button class="equal" onclick="calculate()">=</button>
+                <button class="operator" onclick="setOperation('+')">+</button>
+            
+                <!-- New Operations -->
+                <button class="operator" onclick="setOperation('^')">^</button>
+                <button class="operator" onclick="setOperation('log')">log</button>
+                <button class="operator" onclick="calculateSquareRoot()">√</button>
+                <button class="operator" onclick="appendPi()">π</button>
+            
+                <!-- Parentheses & Percent -->
+                <button onclick="appendNumber('(')">(</button>
+                <button onclick="appendNumber(')')">)</button>
+                <button class="operator" onclick="setOperation('%')">%</button>
+            
+                <!-- ปุ่ม sin, cos, tan -->
+                <button class="operator" onclick="calculateTrig('sin')">sin</button>
+                <button class="operator" onclick="calculateTrig('cos')">cos</button>
+                <button class="operator" onclick="calculateTrig('tan')">tan</button>
+            
+                <!-- ปุ่ม asin, acos, atan  ส่วนกลับของsin cos tan-->
+                <button class="operator" onclick="calculateTrigInverse('asin')">asin</button>
+                <button class="operator" onclick="calculateTrigInverse('acos')">acos</button>
+                <button class="operator" onclick="calculateTrigInverse('atan')">atan</button>
+            
+                <!-- ปุ่ม Clear อยู่ตรงกลาง -->
+                <button class="clear" onclick="clearDisplay()">C</button>
+            </div>
+            
+                </div>
+                
+            <div class="history">
+                <h3>History</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+        <div class="side-blocks">
+            <div class="block" onclick="navigateToPage('Math.html')">คณิต</div>
+            <div class="block" onclick="navigateToPage('Chemistry.html')">เคมี</div>
+            <div class="block" onclick="navigateToPage('Physics.html')">ฟิสิกส์</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function navigateToPage(url) {
+            window.location.href = url; 
+        }
+    </script>
+</body>
+</html>

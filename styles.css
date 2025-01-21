@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('gusandmes.png'); /* ใส่ URL หรือชื่อไฟล์รูป */
+    background-size: cover; /* ทำให้รูปครอบคลุมทั้งหน้าจอ */
+    background-position: center; /* จัดตำแหน่งรูปให้อยู่ตรงกลาง */
+    background-attachment: fixed; /* ทำให้พื้นหลังอยู่กับที่ขณะเลื่อนหน้าเว็บ */
+    padding: 20px;
+}
+
+/* จัดกึ่งกลางเครื่องคิดเลข */
+.container {
+    display: flex;
+    justify-content: center;  /* จัดกึ่งกลางแนวนอน */
+    align-items: center;  /* จัดกึ่งกลางแนวตั้ง */
+    height: 100vh; /* ให้ container สูงเท่ากับหน้าจอ */
+    flex-direction: column; /* จัดวางแนวตั้ง */
+}
+
+/* ปรับให้เครื่องคิดเลขอยู่ตรงกลาง */
+.calculator {
+    margin: auto;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 5px;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    justify-content: center;
+}
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #0056b3;
+}
+.operator {
+    background: #ff6f61;
+}
+.operator:hover {
+    background: #d35450;
+}
+.equal {
+    grid-column: span 2;
+    background: #28a745;
+}
+.equal:hover {
+    background: #1c7c31;
+}
+.clear {
+    grid-column: span 2;
+    background: #dc3545;
+}
+.clear:hover {
+    background: #a72830;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.side-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.block {
+    width: 100px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.block:hover {
+    background-color: #0056b3;
+}
+/* Your existing styles here... */
+
+/* New operator button styling */
+button.operator {
+    background: #ff6f61;
+}
+
+button.operator:hover {
+    background: #d35450;
+}
+
+button.equal {
+    grid-column: span 2;
+    background: #28a745;
+}
+
+button.equal:hover {
+    background: #1c7c31;
+}
+
+button.clear {
+    grid-column: span 2;
+    background: #dc3545;
+}
+
+button.clear:hover {
+    background: #a72830;
+}
+/* ปุ่มพาย */
+button.operator:nth-child(22) {
+    background: #ffb703;
+    color: black;
+}
+
+button.operator:nth-child(22):hover {
+    background: #e09f02;
+}
+/* ปุ่ม % */
+button.operator:nth-child(23) {
+    background: #ffc107;
+    color: black;
+}
+
+button.operator:nth-child(23):hover {
+    background: #e0a800;
+}
+/* ปุ่ม sin, cos, tan */
+button.operator:nth-child(24),
+button.operator:nth-child(25),
+button.operator:nth-child(26) {
+    background: #17a2b8;
+}
+
+button.operator:nth-child(24):hover,
+button.operator:nth-child(25):hover,
+button.operator:nth-child(26):hover {
+    background: #138496;
+}
+/* ปุ่ม asin, acos, atan */
+button.operator:nth-child(27),
+button.operator:nth-child(28),
+button.operator:nth-child(29) {
+    background: #6610f2;
+}
+
+button.operator:nth-child(27):hover,
+button.operator:nth-child(28):hover,
+button.operator:nth-child(29):hover {
+    background: #4b0cb3;
+}
